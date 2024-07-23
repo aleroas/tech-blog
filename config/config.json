@@ -1,0 +1,24 @@
+{
+    "development": {
+      "username": "postgres",
+      "password": "newpassword",  
+      "database": "tech_blog_db",
+      "host": "localhost",
+      "dialect": "postgres"
+    },
+    "test": {
+      "username": "postgres",
+      "password": "newpassword",  
+      "database": "tech_blog_db",
+      "host": "localhost",
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": "postgres",
+      "password": "newpassword",  
+      "database": "tech_blog_db",
+      "host": "localhost",
+      "dialect": "postgres"
+    }
+  }
+  

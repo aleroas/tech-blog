@@ -1,0 +1,42 @@
+<header>
+  <h1>Tech Blog</h1>
+  {{#if logged_in}}
+    <nav>
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/logout">Logout</a>
+    </nav>
+  {{else}}
+    <nav>
+      <a href="/">Home</a>
+      <a href="/login">Login</a>
+      <a href="/signup">Sign Up</a>
+    </nav>
+  {{/if}}
+</header>
+
+<main>
+  <article>
+    <h2>{{title}}</h2>
+    <p>by {{user.username}} on {{createdAt}}</p>
+    <p>{{content}}</p>
+  </article>
+
+  <section>
+    <h3>Comments</h3>
+    {{#if logged_in}}
+      <form id="new-comment-form">
+        <textarea name="comment_text" placeholder="Add a comment..."></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    {{else}}
+      <p><a href="/login">Log in</a> to leave a comment</p>
+    {{/if}}
+
+    {{#each comments}}
+      <div>
+        <p>{{comment_text}} - by {{user.username}} on {{createdAt}}</p>
+      </div>
+    {{/each}}
+  </section>
+</main>
